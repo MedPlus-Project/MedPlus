@@ -64,7 +64,7 @@ const Navbar = () => {
       </div>
       <div className="hidden gap-10 lg:flex">
         <button className="rounded-3xl bg-teal px-10 py-1">
-          <p className="font-semibold uppercase text-white">sign in</p>
+          <a className="font-semibold uppercase text-white" href="/sign-in">sign in</a>
         </button>
       </div>
     </nav>

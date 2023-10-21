@@ -10,11 +10,14 @@ import SymptomChecker from "./pages/features/SymptomChecker";
 import LabReportAnalyser from "./pages/features/LabReportAnalyzer";
 import HospitalDetails from "./pages/features/HospitalDetails";
 import ContactDoctor from "./pages/features/ContactDoctor";
+import SignIn from "./pages/SignIn";
+
 
 import AdminDashboardLayout from "./layouts/AdminDashboardLayout";
 
 import Symptoms from "./pages/adminDashboard/Symptoms";
 import Diseases from "./pages/adminDashboard/Diseases";
+import Signup from "./pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,16 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <p>services</p>,
+        // loader: teamLoader,
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+        // loader: teamLoader,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
         // loader: teamLoader,
       },
       {
