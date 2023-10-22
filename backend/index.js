@@ -5,6 +5,9 @@ const dbConnect = require("./config/dbConnect");
 
 const symptomRoutes = require("./routes/symptom.route");
 const diseaseRoutes = require("./routes/disease.route");
+const authRoute = require("./routes/auth.route.js");
+const userRoute = require("./routes/user.route.js");
+const doctorRoute = require("./routes/doctor.route");
 
 require("dotenv").config();
 
@@ -17,6 +20,9 @@ app.use(cors());
 
 app.use("/api/v1/symptoms", symptomRoutes);
 app.use("/api/v1/diseases", diseaseRoutes);
+app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/user', userRoute);
+app.use('/api/v1/doctor', doctorRoute); 
 
 dbConnect();
 
