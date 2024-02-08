@@ -6,6 +6,8 @@ export const ApiSlug = {
   FORGOT_PASSWORD: "auth/forgot-password",
   RESET_PASSWORD: "auth/password-reset",
 
+  POST_MEDICAL_DATA: "/medical-data",
+
   // vehicles
   VEHICLE: "/vehicle",
 };
