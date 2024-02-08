@@ -7,9 +7,10 @@ const authRoutes = require("./routes/auth.route");
 const symptomRoutes = require("./routes/symptom.route");
 const diseaseRoutes = require("./routes/disease.route");
 const messageRoutes = require("./routes/message.route");
-const hospitalRoutes =  require("./routes/hospital.route");
+const hospitalRoutes = require("./routes/hospital.route");
 const clinicRoutes = require("./routes/clinic.route");
 const doctorRoutes = require("./routes/doctor.route");
+const medicalRoutes = require("./routes/medicalData.route");
 
 require("dotenv").config();
 
@@ -27,8 +28,9 @@ app.use("/api/v1/message", messageRoutes);
 app.use("/api/v1/hospital", hospitalRoutes);
 app.use("/api/v1/clinic", clinicRoutes);
 app.use("/api/v1/doctor", doctorRoutes);
+app.use("/api/v1/medical-data", medicalRoutes);
 
-dbConnect();
+// dbConnect();
 
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
