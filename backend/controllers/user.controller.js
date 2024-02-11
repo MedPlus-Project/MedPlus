@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 
 exports.getDoctorsForSidebar = async (req, res) => {
   try {
-    await User.find({role:'doctor'})
+    await User.find({ role: "doctor" })
       .select("-password")
       .sort({ _id: -1 })
       .then((result) => {
@@ -19,7 +19,7 @@ exports.getDoctorsForSidebar = async (req, res) => {
 
 exports.getUsersForSidebar = async (req, res) => {
   try {
-    await User.find({role:'user'})
+    await User.find({ role: "user" })
       .select("-password")
       .sort({ _id: -1 })
       .then((result) => {
@@ -34,13 +34,13 @@ exports.getUsersForSidebar = async (req, res) => {
   }
 };
 
-exports.getUserRole = async(req,res) =>{
+exports.getUserRole = async (req, res) => {
   try {
-    res.status(200).json({"role": req.user.role})
+    res.status(200).json({ role: req.user.role });
   } catch (error) {
     res.status(500).json({ error: "Server error" });
   }
-}
+};
 
 /*const User = require("../models/user.model");
 
@@ -55,4 +55,3 @@ exports.getUsersForSidebar = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };*/
-

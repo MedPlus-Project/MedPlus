@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ToastContainer } from "react-toastify";
 import { AuthContextProvider } from "./pages/ChatPage/context/AuthContext";
+import { SocketContextProvider } from "./pages/ChatPage/context/SocketContext";
+
 
 import App from "./App";
 
@@ -20,6 +22,7 @@ root.render(
       <PersistGate loading={null} persistor={persistedStore}>
         <React.Suspense fallback={<Splash />}>
           <AuthContextProvider>
+          <SocketContextProvider>
             <ToastContainer
               theme="dark"
               position="top-right"
@@ -28,6 +31,7 @@ root.render(
               pauseOnHover={false}
             />
             <App />
+            </SocketContextProvider>
           </AuthContextProvider>
         </React.Suspense>
       </PersistGate>
