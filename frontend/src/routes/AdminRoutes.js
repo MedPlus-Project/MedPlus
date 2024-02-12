@@ -26,6 +26,12 @@ const FeaturesHomePage = React.lazy(() =>
 const SymptomCheckerPage = React.lazy(() =>
   import("../pages/features/SymptomChecker"),
 );
+const HealthDirectoryPage = React.lazy(() =>
+  import("../pages/features/HealthDirectory"),
+);
+const HealthConditionDetailsPage = React.lazy(() =>
+  import("../pages/features/HealthConditionDetails"),
+);
 const LabReportAnalyzerPage = React.lazy(() =>
   import("../pages/features/LabReportAnalyzer"),
 );
@@ -54,6 +60,12 @@ const AdminDashboardDoctorsPage = React.lazy(() =>
 );
 const AdminDashboardClinicPage = React.lazy(() =>
   import("../pages/adminDashboard/Clinic"),
+);
+const AdminDashboardHospitalPage = React.lazy(() =>
+  import("../pages/adminDashboard/Hospital"),
+);
+const AdminDashboardHealthReportsPage = React.lazy(() =>
+  import("../pages/adminDashboard/HealthReport"),
 );
 
 const AdminRoutes = () =>
@@ -100,6 +112,14 @@ const AdminRoutes = () =>
               element: <SymptomCheckerPage />,
             },
             {
+              path: urlSlug.FEATURE.HEALTH_DIRECTORY,
+              element: <HealthDirectoryPage />,
+            },
+            {
+              path: urlSlug.FEATURE.HEALTH_CONDITION_DETAILS,
+              element: <HealthConditionDetailsPage />,
+            },
+            {
               path: urlSlug.FEATURE.LAB_REPORT_ANALYSER,
               element: <LabReportAnalyzerPage />,
             },
@@ -140,6 +160,14 @@ const AdminRoutes = () =>
             {
               path: urlSlug.ADMIN_DASHBOARD.CLINIC,
               element: <AdminDashboardClinicPage />,
+            },
+            {
+              path: urlSlug.ADMIN_DASHBOARD.HOSPITAL,
+              element: <AdminDashboardHospitalPage />,
+            },
+            {
+              path: urlSlug.ADMIN_DASHBOARD.HEALTH_REPORTS,
+              element: <AdminDashboardHealthReportsPage />,
             },
           ],
         },

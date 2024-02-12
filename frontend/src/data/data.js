@@ -1,4 +1,5 @@
 import SymptomCheckerImg from "../assets/SymptomChecker.png";
+import HealthDirectoryImg from "../assets/directory.png";
 import LabReportAnalyzerImg from "../assets/LabReportAnalyzer.png";
 import HospitalDetailsImg from "../assets/HospitalDetails.png";
 import ContactDoctorImg from "../assets/ContactDoctor.png";
@@ -36,6 +37,11 @@ export const navbarTabs = [
 
 export const featuresTabs = [
   {
+    name: "health directory",
+    img: HealthDirectoryImg,
+    link: urlSlug.FEATURE.HEALTH_DIRECTORY,
+  },
+  {
     name: "symptom checker",
     img: SymptomCheckerImg,
     link: urlSlug.FEATURE.SYMPTOM_CHECKER,
@@ -70,7 +76,9 @@ export const specialization = [
 export const adminDashboardTabs = [
   { name: "symptoms", link: urlSlug.ADMIN_DASHBOARD.SYMPTOMS },
   { name: "diseases", link: urlSlug.ADMIN_DASHBOARD.DISEASES },
+  { name: "health reports", link: urlSlug.ADMIN_DASHBOARD.HEALTH_REPORTS },
   { name: "clinic", link: urlSlug.ADMIN_DASHBOARD.CLINIC },
-  { name: "messages", link: urlSlug.ADMIN_DASHBOARD.MESSAGES },
+  { name: "hospitals", link: urlSlug.ADMIN_DASHBOARD.HOSPITAL },
   { name: "doctors", link: urlSlug.ADMIN_DASHBOARD.DOCTORS },
+  { name: "messages", link: urlSlug.ADMIN_DASHBOARD.MESSAGES },
 ];
