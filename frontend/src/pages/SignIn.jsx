@@ -12,7 +12,7 @@ import BackendError from "../components/backendError";
 import { urlSlug } from "../utils/urlSlug";
 
 const SignIn = () => {
-  const [login, { error = "" }] = useLoginMutation({
+  const [login, { error }] = useLoginMutation({
     fixedCacheKey: "auth-login",
   });
 
