@@ -34,5 +34,6 @@ export const urlSlug = {
     CLINIC: "/admin-dashboard/clinic",
     HOSPITAL: "/admin-dashboard/hospital",
     HEALTH_REPORTS: "/admin-dashboard/HealthReport",
+    USERS: "/admin-dashboard/users",
   },
 };

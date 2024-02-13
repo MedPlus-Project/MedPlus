@@ -17,6 +17,7 @@ import authReducer from "./slices/auth.slice";
 import { authServiceApi } from "../services/authService";
 import { symptomServiceApi } from "../services/symptomsService";
 import { diseaseServiceApi } from "../services/diseaseService";
+import { userServiceApi } from "../services/userService";
 
 const rootConfig = {
   key: "medplus_web_v1",
@@ -31,6 +32,7 @@ const persistedReducer = persistReducer(
     [authServiceApi.reducerPath]: authServiceApi.reducer,
     [symptomServiceApi.reducerPath]: symptomServiceApi.reducer,
     [diseaseServiceApi.reducerPath]: diseaseServiceApi.reducer,
+    [userServiceApi.reducerPath]: userServiceApi.reducer,
   }),
 );
 
@@ -45,6 +47,7 @@ export const store = configureStore({
       authServiceApi.middleware,
       symptomServiceApi.middleware,
       diseaseServiceApi.middleware,
+      userServiceApi.middleware,
     ]),
 });
 
