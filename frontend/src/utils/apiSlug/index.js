@@ -13,4 +13,8 @@ export const ApiSlug = {
 
   // diseases
   DISEASES: "diseases",
+
+  // users
+  GET_ALL_USERS : "user/getAllUsers",
+  MAKE_ADMIN : "user/makeAdmin"
 };

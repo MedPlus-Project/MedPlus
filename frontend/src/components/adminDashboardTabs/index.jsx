@@ -5,10 +5,10 @@ import { adminDashboardTabs } from "../../data/data";
 
 const AdminDashboardTabs = () => {
   return (
-    <div className="mb-5 flex w-full items-center justify-between rounded-xl">
-      <h3 className="my-3 text-3xl font-semibold uppercase text-blue">
+    <div className="mb-5 flex w-full items-center justify-end rounded-xl">
+      {/* <h3 className="my-3 text-3xl font-semibold uppercase text-blue">
         Admin Dashboard
-      </h3>
+      </h3> */}
       <div className="flex h-full items-center justify-between gap-3">
         {adminDashboardTabs.map((tab) => (
           <NavLink

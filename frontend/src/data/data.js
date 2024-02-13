@@ -81,4 +81,5 @@ export const adminDashboardTabs = [
   { name: "hospitals", link: urlSlug.ADMIN_DASHBOARD.HOSPITAL },
   { name: "doctors", link: urlSlug.ADMIN_DASHBOARD.DOCTORS },
   { name: "messages", link: urlSlug.ADMIN_DASHBOARD.MESSAGES },
+  { name: "users", link: urlSlug.ADMIN_DASHBOARD.USERS },
 ];
