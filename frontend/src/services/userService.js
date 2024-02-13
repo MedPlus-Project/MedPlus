@@ -13,7 +13,7 @@ export const userServiceApi = createApi({
     }),
     makeAdmin: builder.mutation({
       query: (data) => ({
-        url: `${ApiSlug.SYMPTOMS}/${data.id}`,
+        url: `${ApiSlug.MAKE_ADMIN}/${data.id}`,
         method: "PATCH",
       }),
       invalidatesTags: ["users"],
